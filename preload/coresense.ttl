@@ -1,0 +1,62 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX iso <https://github.com/Systems-Modeling/SysML-v2-Release>
+PREFIX cso: <https://github.com/CoreSenseEU/CoreSense/blob/main/models/ontology/coresense_ontologies/CSO/cso.sysml>
+PREFIX uao: <https://github.com/CoreSenseEU/CoreSense/blob/main/models/ontology/coresense_ontologies/UAO/uao.sysml>
+PREFIX iso: <https://github.com/CoreSenseEU/CoreSense/blob/main/models/ontology/coresense_ontologies/ISO/iso.sysml>
+
+sysml2:partOf rdfs:SubClassOf 
+
+iso:Entity rdfs:subClassOf rdfs:Class.
+
+iso:SystemEntity rdfs:subClassOf iso:Entity.
+iso:System rdfs:subClassOf iso:Entity.
+iso:SystemEntity sysml2:partOf iso:System.
+
+iso:Model rdfs:subClassOf iso:Entity.
+iso:State rdfs:subClassOf iso:Entity.
+iso:Status rdfs:subClassOf iso:Entity.
+iso:Phenomena rdfs:subClassOf iso:Entity.
+iso:Attribute rdfs:subClassOf iso:Entity.
+iso:Function rdfs:subClassOf iso:Entity.
+iso:Capability rdfs:subClassOf iso:Entity.
+iso:Concern rdfs:subClassOf iso:Entity.
+iso:Context rdfs:subClassOf iso:Entity.
+iso:Knowledge sysml2:partOf iso:Context.
+iso:Scenario sysml2:partOf iso:Context.
+iso:Environment rdfs:subClassOf iso:Entity.
+iso:Constraint rdfs:subClassOf iso:Attribute.
+iso:Parameter rdfs:subClassOf iso:Attribute.
+iso:Structure rdfs:subClassOf iso:Attribute.
+iso:Behavior rdfs:subClassOf iso:Attribute.
+iso:Feature rdfs:subClassOf iso:Attribute.
+iso:Process rdfs:subClassOf iso:Entity.
+iso:Action rdfs:subClassOf Process.
+iso:Agent rdfs:subClassOf iso:Entity.
+iso:Role rdfs:subClassOf iso:Entity.
+iso:Goal rdfs:subClassOf iso:Entity.
+iso:Value rdfs:subClassOf iso:Entity.
+iso:Stakeholder rdfs:subClassOf iso:Entity.
+iso:Objective rdfs:subClassOf iso:Entity.
+
+
+
+cso:EngineOutput rdfs:subClassOf iso:Entity.
+cso:Modelet rdfs:subClassOf iso:Entity.
+cso:Engine rdfs:subClassOf iso:Entity.
+cso:EngineOutput sysml2:partOf cso:Engine.
+
+cso:Exert rdfs:subClassOf iso:Process.
+cso:Estimation rdfs:subClassOf cso:EngineOutput.
+cso:Feature rdfs:subClassOf iso:Attribute.
+cso:CognitiveFunction rdfs:subClassOf iso:Function.
+cso:CognitiveCapability rdfs:subClassOf iso:Capability. 
+cso:Understanding rdfs:subClassOf iso:Entity.
+cso:Awareness rdfs:subClassOf iso:Entity.
+
+
+uao:Mission rdfs:subClassOf iso:Goal.
+uao:Performance rdfs:subClassOf iso:Attribute.
+uao:Mode rdfs:subClassOf iso:Entity.
+uao:Functionality rdfs:subClassOf iso:Capability.
+
+uao:Mode sysml2:partOf uao:Functionality.

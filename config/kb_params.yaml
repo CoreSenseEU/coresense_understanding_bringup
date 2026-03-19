@@ -1,0 +1,18 @@
+triplestar_kb:
+    ros__parameters:
+        store_path: "/tmp/triplestar_kb"
+
+        # # set up paths
+        # templates_dir: "/path_to/templates_dir"
+        # queries_dir: "/path/to/queries_dir"
+        # preload_dir: "/path/to/preload_dir"
+
+        # # subscriber configuration
+        # subscriber_config_file: "/path/to/custom/subscribers.yaml"
+
+        # # query service configuration
+        # query_service_config_file: "/path/to/custom/query_services.yaml"
+
+        preload_files:
+            - floorplan.ttl
+            - annotated_data.ttl

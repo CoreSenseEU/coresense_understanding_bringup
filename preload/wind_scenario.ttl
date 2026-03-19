@@ -1,0 +1,15 @@
+
+PREFIX sc: <https://coresense.eu/ont/scenarios>
+PREFIX cso: <https://github.com/CoreSenseEU/CoreSense/blob/main/models/ontology/coresense_ontologies/CSO/cso.sysml>
+PREFIX ros: <https://ros.org>
+
+sc:Wind a cso:Entity.
+sc:WindEstimationMsg a ros:Message.
+
+l0 a cs:Location.
+l0 cs:t 0.
+
+w0 a cso:Modelet.
+w0 cs:hasFormalism sc:WindEstimationMsg.
+w0 cs:hasLocation l0.
+w0 cs:modelsConcept sc:Wind.
