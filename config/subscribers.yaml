@@ -1,8 +1,8 @@
-insertion_subscribers:
+#insertion_subscribers:
 #    detections:
 #        topic: "/yolo/detections_3d"
 #        template: "DetectionSimple.sparql.tmpl"
-
+#
 # query_time_topic_subscribers:
 #     robotBatteryLevel:
 #         topic: "/battery_level"
