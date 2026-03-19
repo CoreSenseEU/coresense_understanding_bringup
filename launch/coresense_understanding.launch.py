@@ -31,10 +31,10 @@ def generate_launch_description():
         'kb_params.yaml',
     )
 
-    triplestar_kb_node = LifecycleNode(
-        package='triplestar_kb',
+    triplestar_core_node = LifecycleNode(
+        package='triplestar_core',
         executable='kb_node',
-        name='triplestar_kb',
+        name='triplestar_core',
         namespace='',
         output='screen',
         parameters=[config],
@@ -42,22 +42,22 @@ def generate_launch_description():
         emulate_tty=True,
     )
 
-    triplestar_kb_node_config_event = EmitEvent(
+    triplestar_core_node_config_event = EmitEvent(
         event=ChangeState(
-            lifecycle_node_matcher=matches_action(triplestar_kb_node),
+            lifecycle_node_matcher=matches_action(triplestar_core_node),
             transition_id=lifecycle_msgs.msg.Transition.TRANSITION_CONFIGURE,  # type: ignore
         )
     )
 
-    triplestar_kb_node_activate_event = EmitEvent(
+    triplestar_core_node_activate_event = EmitEvent(
         event=ChangeState(
-            lifecycle_node_matcher=matches_action(triplestar_kb_node),
+            lifecycle_node_matcher=matches_action(triplestar_core_node),
             transition_id=lifecycle_msgs.msg.Transition.TRANSITION_ACTIVATE,  # type: ignore
         )
     )
 
     marker_publisher_node = Node(
-        package='triplestar_kb',
+        package='triplestar_core',
         executable='kb_marker_publisher',
         name='marker_publisher',
         namespace='',
@@ -65,13 +65,13 @@ def generate_launch_description():
     )
 
     viz_node = Node(
-        package='triplestar_kb_viz',
+        package='triplestar_viz',
         executable='kb_visualizer_node',
         name='visualizer_node',
-        namespace='triplestar_kb',
+        namespace='triplestar_core',
         parameters=[
             {
-                'store_path': '/tmp/triplestar_kb'  # Add this line
+                'store_path': '/tmp/triplestar_core'  # Add this line
             }
         ],
         output='screen',
@@ -79,7 +79,7 @@ def generate_launch_description():
 
     _start_marker_publisher = RegisterEventHandler(
         OnStateTransition(
-            target_lifecycle_node=triplestar_kb_node,
+            target_lifecycle_node=triplestar_core_node,
             goal_state='active',
             entities=[marker_publisher_node],
         )
@@ -103,9 +103,9 @@ def generate_launch_description():
     return LaunchDescription(
         [
             log_level_arg,
-            triplestar_kb_node,
-            triplestar_kb_node_config_event,
-            triplestar_kb_node_activate_event,
+            triplestar_core_node,
+            triplestar_core_node_config_event,
+            triplestar_core_node_activate_event,
             coresense_vampire_node,
             coresense_understanding_node
             # start_marker_publisher,
