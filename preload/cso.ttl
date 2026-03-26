@@ -112,11 +112,11 @@ cso:conforms_model rdf:type rdf:Property;
 
 cso:composed_of rdf:type rdf:Property;
   rdfs:domain cso:Modelet;
-  rdfs:range iso:Modelet.
+  rdfs:range cso:Modelet.
 
 cso:associated_to_engine rdf:type rdf:Property;
   rdfs:domain cso:Modelet;
-  rdfs:range iso:Engine.
+  rdfs:range cso:Engine.
 
 cso:cf_uses_modelet rdf:type rdf:Property;
   rdfs:domain cso:CognitiveFunction;
