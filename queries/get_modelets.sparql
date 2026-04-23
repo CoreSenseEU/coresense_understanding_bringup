@@ -1,14 +1,14 @@
 PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX iso: <https://github.com/CoreSenseEU/CoreSense/blob/main/models/ontology/coresense_ontologies/ISO/iso.sysml>
-PREFIX csu: <https://github.com/CoreSenseEU/coresense_understanding_bringup/blob/main/preload/understanding.ttl>
+PREFIX iso: <https://github.com/CoreSenseEU/CoreSense/blob/main/models/ontology/coresense_ontologies/ISO/iso.sysml#>
+PREFIX csu: <https://github.com/CoreSenseEU/coresense_understanding_bringup/blob/main/preload/understanding.ttl#>
 
-SELECT ?modelet ?formalism ?concept
+SELECT *
 WHERE {
-  ?modelet a iso:Modelet;
-    csu:hasFormalism ?formalism;
-    csu:modelsConcept ?concept.
+  ?modelet rdf:type iso:Modelet.
+#    csu:hasFormalism ?formalism;
+#    csu:modelsConcept ?concept.
 #    csu:hasLocation ?location;
 #    csu:hasScope ?scope;
 #    csu:hasProperty ?property;
