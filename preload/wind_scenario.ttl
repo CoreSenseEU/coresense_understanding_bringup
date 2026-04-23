@@ -4,14 +4,14 @@
 @prefix csu: <https://github.com/CoreSenseEU/coresense_understanding_bringup/blob/main/preload/understanding.ttl#>.
 @prefix ros: <https://ros.org#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 
 
+sc:Wind rdf:type csu:Concept.
+sc:WindEstimationMsg rdf:type csu:Formalism.
 #ros:Message rdfs:subClassOf csu:Formalism.
+#sc:WindEstimationMsg rdf:type ros:Message.
 
-sc:Wind a csu:Concept.
-#sc:WindEstimationMsg a ros:Message.
-sc:WindEstimationMsg a csu:Formalism.
-
-sc:windModelet a cso:Modelet.
+sc:windModelet rdf:type cso:Modelet.
 sc:windModelet csu:hasFormalism sc:WindEstimationMsg.
 sc:windModelet csu:modelsConcept sc:Wind.
