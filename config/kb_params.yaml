@@ -1,6 +1,7 @@
 triplestar_core:
     ros__parameters:
         store_path: "/tmp/triplestar_kb"
+        base_iri: "https://coresense.eu/understanding"
 
         # Package whose share directory contains the KB configuration.
         # The package must follow this layout convention:
@@ -20,3 +21,5 @@ triplestar_core:
             - uao.ttl
             - floorplan.ttl
             - annotated_data.ttl
+            - understanding.ttl
+            - wind_scenario.ttl

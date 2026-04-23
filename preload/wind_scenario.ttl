@@ -1,15 +1,16 @@
 
-PREFIX sc: <https://coresense.eu/ont/scenarios>
-PREFIX cso: <https://github.com/CoreSenseEU/CoreSense/blob/main/models/ontology/coresense_ontologies/CSO/cso.sysml>
-PREFIX ros: <https://ros.org>
+@prefix sc: <https://coresense.eu/ont/scenarios#>.
+@prefix cso: <https://github.com/CoreSenseEU/CoreSense/blob/main/models/ontology/coresense_ontologies/CSO/cso.sysml#>.
+@prefix csu: <https://github.com/CoreSenseEU/coresense_understanding_bringup/blob/main/preload/understanding.ttl#>.
+@prefix ros: <https://ros.org#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 
-sc:Wind a cso:Entity.
+
+ros:Message rdfs:subClassOf csu:Formalism.
+
+sc:Wind a csu:Concept.
 sc:WindEstimationMsg a ros:Message.
 
-l0 a cs:Location.
-l0 cs:t 0.
-
-w0 a cso:Modelet.
-w0 cs:hasFormalism sc:WindEstimationMsg.
-w0 cs:hasLocation l0.
-w0 cs:modelsConcept sc:Wind.
+sc:windModelet a cso:Modelet.
+sc:windModelet csu:hasFormalism sc:WindEstimationMsg.
+sc:windModelet csu:modelsConcept sc:Wind.

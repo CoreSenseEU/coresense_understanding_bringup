@@ -1,7 +1,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix iso: <https://github.com/CoreSenseEU/CoreSense/blob/main/models/ontology/coresense_ontologies/ISO/iso.sysml>.
-@prefix sysml2: <https://github.com/Systems-Modeling/SysML-v2-Release>.
+@prefix iso: <https://github.com/CoreSenseEU/CoreSense/blob/main/models/ontology/coresense_ontologies/ISO/iso.sysml#>.
+@prefix sysml2: <https://github.com/Systems-Modeling/SysML-v2-Release#>.
 
 iso:Entity rdfs:subClassOf rdfs:Class.
 

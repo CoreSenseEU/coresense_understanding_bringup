@@ -12,3 +12,6 @@ person_exists:
 
 modelet_exists:
     query_file: modelet_exists.sparql
+
+get_modelets:
+    query_file: get_modelets.sparql

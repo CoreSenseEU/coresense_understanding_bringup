@@ -1,10 +1,9 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix iso: <https://github.com/Systems-Modeling/SysML-v2-Release>.
-@prefix cso: <https://github.com/CoreSenseEU/CoreSense/blob/main/models/ontology/coresense_ontologies/CSO/cso.sysml>.
-@prefix uao: <https://github.com/CoreSenseEU/CoreSense/blob/main/models/ontology/coresense_ontologies/UAO/uao.sysml>.
-@prefix iso: <https://github.com/CoreSenseEU/CoreSense/blob/main/models/ontology/coresense_ontologies/ISO/iso.sysml>.
-@prefix sysml2: <https://github.com/Systems-Modeling/SysML-v2-Release>.
+@prefix cso: <https://github.com/CoreSenseEU/CoreSense/blob/main/models/ontology/coresense_ontologies/CSO/cso.sysml#>.
+@prefix uao: <https://github.com/CoreSenseEU/CoreSense/blob/main/models/ontology/coresense_ontologies/UAO/uao.sysml#>.
+@prefix iso: <https://github.com/CoreSenseEU/CoreSense/blob/main/models/ontology/coresense_ontologies/ISO/iso.sysml#>.
+@prefix sysml2: <https://github.com/Systems-Modeling/SysML-v2-Release#>.
 
 ## cso.sysml
 cso:EngineOutput rdfs:subClassOf iso:Entity.
