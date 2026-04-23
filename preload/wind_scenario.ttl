@@ -6,10 +6,11 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 
 
-ros:Message rdfs:subClassOf csu:Formalism.
+#ros:Message rdfs:subClassOf csu:Formalism.
 
 sc:Wind a csu:Concept.
-sc:WindEstimationMsg a ros:Message.
+#sc:WindEstimationMsg a ros:Message.
+sc:WindEstimationMsg a csu:Formalism.
 
 sc:windModelet a cso:Modelet.
 sc:windModelet csu:hasFormalism sc:WindEstimationMsg.
