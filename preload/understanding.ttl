@@ -29,10 +29,14 @@ csu:hasFormalism rdfs:subPropertyOf dmci-terms:format;
 #   rdfs:domain cso:Modelet;
 #   rdfs:range dmci-terms:Extent.
 
-csu:Concept rdfs:subClassOf iso:Entity.
+csu:RepresentationClass rdfs:subClassOf iso:Entity.
 csu:modelsConcept rdf:type rdf:Property;
   rdfs:domain cso:Modelet;
   rdfs:range csu:Concept.
+
+csu:hasRepresentationClass rdf:type rdf:Property;
+  rdfs:domain cso:Modelet;
+  rdfs:range csu:RepresentationClass.
 
 csu:ID rdfs:subClassOf iso:Model.
 csu:hasID rdfs:subPropertyOf dmci-terms:identifier;
@@ -45,6 +49,10 @@ csu:hasProperty a rdf:Property;
   rdfs:range csu:Property.
 
 csu:hasName a rdf:Property;
+  rdfs:domain csu:Property;
+  rdfs:range xsd:string.
+
+csu:hasType a rdf:Property;
   rdfs:domain csu:Property;
   rdfs:range xsd:string.
 

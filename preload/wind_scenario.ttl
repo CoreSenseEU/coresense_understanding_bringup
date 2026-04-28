@@ -7,11 +7,39 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 
 
-sc:Wind rdf:type csu:Concept.
-sc:WindEstimationMsg rdf:type csu:Formalism.
-#ros:Message rdfs:subClassOf csu:Formalism.
-#sc:WindEstimationMsg rdf:type ros:Message.
+sc:Trajectory a csu:Concept.
+sc:Wind a csu:Concept.
+sc:Path a csu:Concept.
 
-sc:windModelet rdf:type cso:Modelet.
+sc:Vector a csu:RepresentationClass.
+
+#sc:WindEstimationMsg a csu:Formalism.
+ros:Message rdfs:subClassOf csu:Formalism.
+sc:WindEstimationMsg a ros:Message.
+sc:TrajectoryMsg a ros:Message.
+
+
+
+sc:windPropertyInteger a csu:Property;
+  csu:hasName "wind property integer";
+  csu:hasType "integer";
+  csu:hasValue 0.
+
+sc:windPropertyString a csu:Property;
+  csu:hasName "wind property string";
+  csu:hasType "string";
+  csu:hasValue "empty".
+
+sc:windModelet a cso:Modelet.
 sc:windModelet csu:hasFormalism sc:WindEstimationMsg.
 sc:windModelet csu:modelsConcept sc:Wind.
+sc:windModelet csu:hasRepresentationClass sc:Vector.
+
+sc:windModelet csu:hasProperty sc:windPropertyInteger.
+sc:windModelet csu:hasProperty sc:windPropertyString.
+
+sc:trajectoryModelet a cso:Modelet.
+sc:trajectoryModelet csu:hasFormalism sc:TrajectoryMsg.
+sc:trajectoryModelet csu:modelsConcept sc:Trajectory.
+sc:trajectoryModelet csu:modelsConcept sc:Path.
+sc:trajectoryModelet csu:hasRepresentationClass sc:Vector.

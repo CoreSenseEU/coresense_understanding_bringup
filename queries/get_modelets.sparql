@@ -7,11 +7,17 @@ PREFIX csu: <https://github.com/CoreSenseEU/coresense_understanding_bringup/blob
 SELECT *
 WHERE {
   ?modelet rdf:type cso:Modelet;
-    csu:hasFormalism ?formalism;
-    csu:modelsConcept ?concept.
+    csu:hasFormalism ?formalism.
+  OPTIONAL { ?modelet csu:modelsConcept ?concept. }
+  OPTIONAL { ?modelet csu:hasRepresentationClass ?representationClass. }
+  OPTIONAL {
+    ?modelet csu:hasProperty ?property.
+    ?property csu:hasName ?propertyName;
+              csu:hasType ?propertyType;
+              csu:hasValue ?propertyValue.
+  }
 }
-LIMIT 100
-#    csu:hasLocation ?location;
-#    csu:hasScope ?scope;
-#    csu:hasProperty ?property;
-#    csu:hasCreator ?creator.
+
+#  OPTIONAL { ?modelet csu:hasCreator ?creator. }
+#  OPTIONAL { ?modelet csu:hasLocation ?location. }
+#  OPTIONAL { ?modelet csu:hasScope ?scope. }
