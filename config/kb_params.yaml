@@ -19,7 +19,9 @@ triplestar_core:
             - iso.ttl
             - cso.ttl
             - uao.ttl
+            - decision_ontology.ttl
             - floorplan.ttl
             - annotated_data.ttl
             - understanding.ttl
             - wind_scenario.ttl
+            - decision_scenario.ttl

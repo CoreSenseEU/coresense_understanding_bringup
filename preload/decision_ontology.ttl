@@ -1,0 +1,15 @@
+
+@prefix sc: <https://coresense.eu/ont/scenarios#>.
+@prefix ds: <https://coresense.eu/ont/decision_system#>.
+@prefix cso: <https://github.com/CoreSenseEU/CoreSense/blob/main/models/ontology/coresense_ontologies/CSO/cso.sysml#>.
+@prefix csu: <https://github.com/CoreSenseEU/coresense_understanding_bringup/blob/main/preload/understanding.ttl#>.
+@prefix ros: <https://ros.org#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+
+ds:choice_set a csu:RepresentationClass.
+ds:alternative_array a csu:RepresentationClass.
+ds:cue_array a csu:RepresentationClass.
+
+ds:alternativeArrayMsg a ros:Message.
+ds:cueArrayMsg a ros:Message.
