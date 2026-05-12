@@ -6,11 +6,11 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 
-sc:given_cues a cso:Modelet;
-  csu:hasFormalism ds:cueArrayMsg;
-  csu:hasRepresentationClass ds:cue_array.
+sc:given_cues_modelet a cso:Modelet;
+  csu:hasFormalism ds:cue_array_msg;
+  csu:hasRepresentationClass ds:cue_array_rc.
 
-sc:given_alternatives a cso:Modelet;
-  csu:hasFormalism ds:alternativeArrayMsg;
-  csu:hasRepresentationClass ds:choice_set;
-  csu:hasRepresentationClass ds:alternative_array.
+sc:given_alternatives_modelet a cso:Modelet;
+  csu:hasFormalism ds:alternative_array_msg;
+  csu:hasRepresentationClass ds:choice_set_rc;
+  csu:hasRepresentationClass ds:alternative_array_rc.
